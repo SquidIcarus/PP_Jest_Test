@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="css/styles.css" rel="stylesheet" type="text/css">
+    <script type="text/javascript" src="src/index.js"></script>
+    <script type="text/javascript" src="src/pizza.js"></script>
+    <title>Pizza Parlor</title>
+</head>
+
+<body>
+
+    <h1>Build Your Pizza!</h1>
+
+    <form class="container" id="pizzaOrder">
+        <div class="size">
+            <h2>Size</h2>
+            <label><input type="radio" name="size" value="small"> Small 8"</label><br />
+            <label><input type="radio" name="size" value="medium"> Medium 12"</label><br />
+            <label><input type="radio" name="size" value="large"> Large 14"</label><br />
+            <label><input type="radio" name="size" value="party"> Party 18"</label><br />
+        </div>
+        <div class="dough">
+            <h2>Dough</h2>
+            <label><input type="radio" name="dough" value="Sourdough"> Sourdough</label><br />
+            <label><input type="radio" name="dough" value="Thin Crust"> Thin Crust</label><br />
+            <label><input type="radio" name="dough" value="New York Style"> New York Style</label><br />
+            <label><input type="radio" name="dough" value="Chicago Style"> Chicago Style</label><br />
+            <label><input type="radio" name="dough" value="Detroit Style"> Detroit Style</label><br />
+            <label><input type="radio" name="dough" value="Gluten Free"> Gluten Free</label><br />
+        </div>
+        <div class="sauce">
+            <h2>Sauce</h2>
+            <label><input type="radio" name="sauce" value="Tomato"> Tomato</label><br />
+            <label><input type="radio" name="sauce" value="Pesto"> Pesto</label><br />
+            <label><input type="radio" name="sauce" value="White Sauce"> White Sauce</label><br />
+            <label><input type="radio" name="sauce" value="BBQ Sauce"> BBQ Sauce</label><br />
+            <label><input type="radio" name="sauce" value="Buffalo"> Buffalo</label><br />
+        </div>
+        <div class="toppings">
+            <h2>Toppings</h2>
+            <label><input type="checkbox" name="topping" value="Pepperoni"> Pepperoni</label><br />
+            <label><input type="checkbox" name="topping" value="Sausage"> Sausage</label><br />
+            <label><input type="checkbox" name="topping" value="Bacon"> Bacon</label><br />
+            <label><input type="checkbox" name="topping" value="Chicken"> Chicken</label><br />
+            <label><input type="checkbox" name="topping" value="Anchovies"> Anchovies</label><br />
+        </div>
+        <div class="additional-toppings">
+            <h2>Additional Toppings</h2>
+            <label><input type="checkbox" name="topping" value="Onion"> Onion</label><br />
+            <label><input type="checkbox" name="topping" value="Bell Pepper"> Bell Pepper</label><br />
+            <label><input type="checkbox" name="topping" value="Mushroom"> Mushroom</label><br />
+            <label><input type="checkbox" name="topping" value="Basil"> Basil</label><br />
+            <label><input type="checkbox" name="topping" value="Roasted Garlic"> Roasted Garlic</label><br />
+            <label><input type="checkbox" name="topping" value="Olive"> Olive</label><br />
+            <label><input type="checkbox" name="topping" value="Pineapple"> Pineapple</label><br />
+        </div>
+        <div class="cheese">
+            <h2>Cheese</h2>
+            <label><input type="radio" name="cheese" value="Mozzarella"> Mozzarella</label><br />
+            <label><input type="radio" name="cheese" value="Smoked Gouda"> Smoked Gouda</label><br />
+            <label><input type="radio" name="cheese" value="Parmesan"> Parmesan</label><br />
+            <label><input type="radio" name="cheese" value="Guyere"> Gruyere</label><br />
+            <label><input type="radio" name="cheese" value="Ricotta"> Ricotta</label><br />
+            <label><input type="radio" name="cheese" value="Goat Cheese"> Goat Cheese</label><br />
+        </div>
+        </div>
+
+        <input type="submit" value="Build Pizza" onclick="addToppings(event)">
+    </form>
+
+    <div id="errorMessage" style="display: none; color: red; font-weight: bold;"></div>
+    <div id="builtPizzaDetails"></div>
+    </div>
+</body>
+
+</html>
